@@ -28,9 +28,8 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
-DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
 # Application definition
+
 INSTALLED_APPS = [
     'blog.apps.BlogConfig',
     'users.apps.UsersConfig',
@@ -43,9 +42,6 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap4',
 ]
-
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -127,3 +123,12 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'
+
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
+
+LOGIN_REDIRECT_URL = 'blog-home'
+LOGIN_URL = 'login'
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
